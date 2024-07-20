@@ -132,13 +132,20 @@ app.post("/logInStatus", (req, res) => {
 
 // Route to Check If User is auth to create blog
 app.post("/createBlog/auth", async (req, res) => {
-  if (
-    req.session.user_id &&
-    (req.session.user_role === "content-creator" || req.session.user_role === "admin")
-  ) {
-    res.json({ isAuth: true });
-  } else {
-    res.json({ isAuth: false });
+  try {
+    console.log("Session Info:", req.session);
+
+    if (
+      req.session.user_id &&
+      (req.session.user_role === "content-creator" || req.session.user_role === "admin")
+    ) {
+      res.json({ isAuth: true });
+    } else {
+      res.json({ isAuth: false });
+    }
+  } catch (err) {
+    console.error("Error checking authorization:", err); 
+    res.status(500).json({ isAuth: false, error: "Internal Server Error" });
   }
 });
 
