@@ -45,6 +45,7 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
           <a
             type="button"
             className="btn custom btn-lg"
+            id="createBlog"
             // href="/createBlog"
             onClick={handleCreateBlog}
           >

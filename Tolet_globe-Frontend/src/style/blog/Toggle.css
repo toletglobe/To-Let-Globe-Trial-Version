@@ -8,6 +8,17 @@
   justify-content: center;
 }
 
+#createBlog {
+  color: white !important;
+  padding: 10px 23px !important;
+}
+
+
+#createBlog {
+  color: white !important;
+  padding: 10px 23px !important;
+}
+
 #togglecontainer .btn.custom {
   color: white !important;
   padding: 10px 23px !important;
