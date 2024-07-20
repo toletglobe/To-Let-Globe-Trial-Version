@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import "../../style/blog/Toggle.css";
 // import axios from "axios";
@@ -23,7 +24,8 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
       });
   };
   return (
-    <div className="container outer my-5">
+    <div>
+    <div className="main-toggle outer my-5">
       <div className="row d-flex justify-content-between">
         <div className="col-3" id="togglecontainer1">
           <button
@@ -41,7 +43,9 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
             Trending
           </button>
         </div>
-        <div className="col-3" id="togglecontainer2">
+      </div>
+    </div>
+    <div className="col" id="togglecontainer2">
           <a
             type="button"
             className="btn custom btn-lg"
@@ -52,7 +56,6 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
             Create Blog
           </a>
         </div>
-      </div>
     </div>
   );
 }

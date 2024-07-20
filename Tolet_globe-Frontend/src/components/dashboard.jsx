@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/dashboard.css';
-import { Link, Routes, Route, useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 //import logoimg from '../assets/img/Favicon.png'
 import Admin from '../Admin';
 import User from '../User';

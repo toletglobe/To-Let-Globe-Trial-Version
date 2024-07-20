@@ -5,7 +5,7 @@ import image3 from "../../assets/image/property/img3.svg";
 import image4 from "../../assets/image/property/img4.svg";
 import { Row, Col } from "react-bootstrap";
 import { Footer } from "../footer";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NavBar from "../NavBar";
 
 export const Property = () => {
@@ -28,13 +28,13 @@ export const Property = () => {
             <div className="property-detail" style={{ textAlign: "left" }}>
               <h2>Find the best To-Let in Lucknow </h2>
               <p>With No Brokerage on rental PGs | Flats | Houses | Offices.</p>
-              <a
-                href="#"
+              <Link
+                to="#"
                 onClick={() => navigate("/listing")}
-                class="join-button"
+                className="join-button"
               >
                 Join Us
-              </a>
+              </Link>
             </div>
           </Col>
           <Col>
@@ -49,14 +49,14 @@ export const Property = () => {
             <div className="property-detail" style={{ textAlign: "right" }}>
               <h2>Find the best To-Let in Ayodhya </h2>
               <p>With No Brokerage on rental PGs | Flats | Houses | Offices.</p>
-              <a
-                href="#"
+              <Link
+                to="#"
                 onClick={() => navigate("/nf")}
-                class="join-button"
+                className="join-button"
                 alt="PropImage"
               >
                 Join Us
-              </a>
+              </Link>
             </div>
           </Col>
         </Row>
@@ -65,14 +65,14 @@ export const Property = () => {
             <div className="property-detail" style={{ textAlign: "left" }}>
               <h2>Find the best To-Let in Vellore </h2>
               <p>With No Brokerage on rental PGs | Flats | Houses | Offices.</p>
-              <a
-                href="#"
+              <Link 
+                to="#"
                 onClick={() => navigate("/nf")}
-                class="join-button"
+                className="join-button"
                 alt="PropImage"
               >
                 Join Us
-              </a>
+              </Link>
             </div>
           </Col>
           <Col>
@@ -87,9 +87,9 @@ export const Property = () => {
             <div className="property-detail" style={{ textAlign: "right" }}>
               <h2>Find the best To-Let in Kota </h2>
               <p>With No Brokerage on rental PGs | Flats | Houses | Offices.</p>
-              <a href="#" onClick={() => navigate("/nf")} class="join-button">
+              <Link to="#" onClick={() => navigate("/nf")} class="join-button">
                 Join Us
-              </a>
+              </Link>
             </div>
           </Col>
         </Row>

@@ -1,17 +1,24 @@
+.main-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0 20px;
+  border-radius: 50px;
+}
 #togglecontainer1 {
   width: 260px;
   height: 80px;
   background-color: #171717;
-  border-radius: 10%;
+  border-radius: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #togglecontainer2 {
-  width: 190px;
+  width: 160px;
   height: 80px;
-  background-color: #171717;
   border-radius: 10%;
   display: flex;
   align-items: center;

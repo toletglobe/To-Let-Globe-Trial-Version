@@ -90,11 +90,15 @@ function BlogContainer() {
           />
         ))}
       </div>
+      <div 
+      style={{marginTop:"20px"}}>
+
       <Pagination
         noOfBlogs={backendData.length}
         paginate={paginate}
         currentPg={currentPg}
       />
+      </div>
     </>
   );
 }

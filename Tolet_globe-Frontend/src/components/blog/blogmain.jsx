@@ -1,3 +1,5 @@
+/* eslint-disable no-unreachable */
+/* eslint-disable no-lone-blocks */
 import "../../style/blog/blogmain.css";
 // import { Container, Typography } from "@mui/material";
 // import { Col, Row } from "react-bootstrap";
@@ -28,7 +30,9 @@ export const BlogMain = () => {
       </div>
 
       <BlogContainer />
+      <div className="trending">
       <CategoryContainer />
+        </div>
       <Footer />
     </>
   );

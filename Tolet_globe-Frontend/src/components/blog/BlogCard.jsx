@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
 import "../../style/blog/BlogCard.css";
@@ -94,14 +96,14 @@ const BlogCard = ({
     };
 
     const resp = await axios.post(
-      process.env.REACT_APP_API_URL + `/blogs/updateViews/${id}`,
+      process.env.REACT_APP_API_URL + `blogs/updateViews/${id}`,
       dataToDB
     );
     navigate(`/showBlog/${id}`);
   };
 
   return (
-    <div className="card" style={{ width: "30%", height: "70vh" }}>
+    <div className="card" style={{ width: "30%", height: "80vh" }}>
       <img
         src={image}
         className="card-img-top"
@@ -109,7 +111,6 @@ const BlogCard = ({
         // height="40%"
         // style={{ objectFit: "cover" }}
       />
-
 
       <div className="row">
         <div className="card-body" id="#nopadding">
@@ -147,10 +148,10 @@ const BlogCard = ({
 
           <div className="container-fluid p-0">
             <div className="row d-flex">
-              <div className="col-8 pr-0">
+              <div className="col-6 pr-0">
                 <AuthorDetails author={author} role={role} />
               </div>
-              <div className="col-4 p-0 d-flex justify-content-between">
+              <div className="col-4 p-0 d-flex">
                 <div id="viewsdiv" className="col-6 p-0 d-flex">
                   <Views views={views} />
                 </div>

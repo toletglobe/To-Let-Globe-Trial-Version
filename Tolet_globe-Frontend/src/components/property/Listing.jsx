@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './../../style/property/listing.css';
 import p1 from '../../assets/image/property/property-1.jpg'
 import author from "../../assets/image/property/author.jpg"
@@ -36,9 +36,9 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p1} alt="New Apartment Nice View" style={{w:"100"}} />
-                  </a>
+                  </Link>
                 
                   <div className="card-badge green">For Rent</div>
 
@@ -68,7 +68,7 @@ const Listing = () => {
 
                 <div className="card-content">
                   <h3 className="h3 card-title">
-                    <a href="#">Flat For Rent</a>
+                    <Link to="#">Flat For Rent</Link>
                   </h3>
                   <div className="card-price">
                     <strong>Rs. 12,000 (negotiable) </strong>
@@ -119,7 +119,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Deepti rastogi</a>
+                        <Link to="#">Deepti rastogi</Link>
                       </p>
 
                       <p className="author-title"></p>
@@ -153,9 +153,9 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p2} alt="Modern Apartments" style={{w:"100"}} />
-                  </a>
+                  </Link>
 
                   <div className="card-badge green">For Rent</div>
 
@@ -185,7 +185,7 @@ const Listing = () => {
 
                 <div className="card-content">
                   <h3 className="h3 card-title">
-                    <a href="#">House for rent</a>
+                    <Link to="#">House for rent</Link>
                  </h3>
                   <div className="card-price">
                     <strong>Rs. 10,000</strong>/Month
@@ -235,7 +235,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Vindhya Vikram</a>
+                        <Link to="#">Vindhya Vikram</Link>
                       </p>
 
                       <p className="author-title"></p>
@@ -269,9 +269,9 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p3} alt="Comfortable Apartment" style={{w:"100"}}/>
-                  </a>
+                  </Link>
 
                   <div className="card-badge green">For Rent</div>
 
@@ -302,7 +302,7 @@ const Listing = () => {
                 <div className="card-content">
 
                 <h3 className="h3 card-title">
-                    <a href="#">House For Rent </a>
+                    <Link to="#">House For Rent </Link>
                   </h3>
 
                   <div className="card-price">
@@ -355,7 +355,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Rajesh kumar</a>
+                        <Link to="#">Rajesh kumar</Link>
                       </p>
 
                       <p className="author-title"></p>
@@ -389,9 +389,9 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p4} alt="Luxury villa in Rego Park" style={{w:"100"}}/>
-                  </a>
+                  </Link>
 
                   <div className="card-badge green">For Rent</div>
 
@@ -422,7 +422,7 @@ const Listing = () => {
                 <div className="card-content">
 
                 <h3 className="h3 card-title">
-                    <a href="#">House For Rent</a>
+                    <Link to="#">House For Rent</Link>
                   </h3>
                   <div className="card-price">
                     <strong>Rs. 8,500</strong>
@@ -474,7 +474,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Aman Saxena</a>
+                        <Link to="#">Aman Saxena</Link>
                       </p>
 
                       <p className="author-title"></p>
@@ -522,9 +522,9 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p5} alt="New Apartment Nice View" style={{w:"100"}}/>
-                  </a>
+                  </Link>
                 
                   <div className="card-badge green">For sale</div>
 
@@ -554,7 +554,7 @@ const Listing = () => {
 
                 <div className="card-content">
                   <h3 className="h3 card-title">
-                    <a href="#"> Flat For Sale</a>
+                    <Link to="#"> Flat For Sale</Link>
                   </h3>
                   <div className="card-price">
                     <strong>Rs. 30,50,000</strong>
@@ -604,7 +604,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Gupta property</a>
+                        <Link to="#">Gupta property</Link>
                       </p>
 
                       <p className="author-title"></p>
@@ -638,9 +638,9 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p6} alt="Modern Apartments" style={{w:"100"}}/>
-                  </a>
+                  </Link>
 
                   <div className="card-badge green">For Rent</div>
 
@@ -670,7 +670,7 @@ const Listing = () => {
 
                 <div className="card-content">
                   <h3 className="h3 card-title">
-                    <a href="#">House For Rent</a>
+                    <Link to="#">House For Rent</Link>
                  </h3>
                   <div className="card-price">
                     <strong>Rs. 2,20,000</strong>
@@ -720,7 +720,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Anurag</a>
+                        <Link to="#">Anurag</Link>
                       </p>
 
                       <p className="author-title"></p>
@@ -754,9 +754,9 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p7} alt="Comfortable Apartment" style={{w:"100"}}/>
-                  </a>
+                  </Link>
 
                   <div className="card-badge green">For Rent</div>
 
@@ -786,7 +786,7 @@ const Listing = () => {
 
                 <div className="card-content">
                 <h3 className="h3 card-title">
-                    <a href="#"> House For Rent </a>
+                    <Link to="#"> House For Rent </Link>
                   </h3>
 
                   <div className="card-price">
@@ -839,7 +839,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Sanjeev</a>
+                        <Link to="#">Sanjeev</Link>
                       </p>
 
                       <p className="author-title"></p>
@@ -873,9 +873,9 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p8} alt="Luxury villa in Rego Park" style={{w:"100"}}/>
-                  </a>
+                  </Link>
 
                   <div className="card-badge green">For Rent</div>
 
@@ -905,7 +905,7 @@ const Listing = () => {
 
                 <div className="card-content">
                 <h3 className="h3 card-title">
-                    <a href="#">Shop For Rent</a>
+                    <Link to="#">Shop For Rent</Link>
                   </h3>
 
                   <div className="card-price">
@@ -958,7 +958,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Devendra Kumar</a>
+                        <Link to="#">Devendra Kumar</Link>
                       </p>
 
                       <p className="author-title"></p>
@@ -1009,7 +1009,7 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p1} alt="New Apartment Nice View" style={{w:"100"}}/>
                   </a>
                 
@@ -1041,7 +1041,7 @@ const Listing = () => {
 
                 <div className="card-content">
                   <h3 className="h3 card-title">
-                    <a href="#">3 BHK House On Rent</a>
+                    <Link to="#">3 BHK House On Rent</a>
                   </h3>
                   <div className="card-price">
                     <strong>RS. 40,000</strong>
@@ -1092,7 +1092,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Shaikh Ubaid Tibrani</a>
+                        <Link to="#">Shaikh Ubaid Tibrani</a>
                       </p>
 
                       <p className="author-title">Full Stack Developer</p>
@@ -1126,7 +1126,7 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p2} alt="Modern Apartments" style={{w:"100"}}/>
                   </a>
 
@@ -1158,7 +1158,7 @@ const Listing = () => {
 
                 <div className="card-content">
                   <h3 className="h3 card-title">
-                    <a href="#">2 BHK Flat On Rent</a>
+                    <Link to="#">2 BHK Flat On Rent</a>
                  </h3>
                   <div className="card-price">
                     <strong>75 lac</strong>
@@ -1209,7 +1209,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Shaikh Ubaid Tibrani</a>
+                        <Link to="#">Shaikh Ubaid Tibrani</a>
                       </p>
 
                       <p className="author-title">Full Stack Developer</p>
@@ -1243,7 +1243,7 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p3} alt="Comfortable Apartment" style={{w:"100"}}/>
                   </a>
 
@@ -1280,7 +1280,7 @@ const Listing = () => {
                   </div>
 
                   <h3 className="h3 card-title">
-                    <a href="#">2 BHK House On Rent </a>
+                    <Link to="#">2 BHK House On Rent </a>
                   </h3>
 
                   <p className="card-text">
@@ -1328,7 +1328,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Shaikh Ubaid Tibrani</a>
+                        <Link to="#">Shaikh Ubaid Tibrani</a>
                       </p>
 
                       <p className="author-title">Full Stack Developer</p>
@@ -1362,7 +1362,7 @@ const Listing = () => {
 
                 <figure className="card-banner">
 
-                  <a href="#">
+                  <Link to="#">
                     <img src={p4} alt="Luxury villa in Rego Park" style={{w:"100"}}/>
                   </a>
 
@@ -1399,7 +1399,7 @@ const Listing = () => {
                   </div>
 
                   <h3 className="h3 card-title">
-                    <a href="#">khurdu ,rawivar ,lucknow</a>
+                    <Link to="#">khurdu ,rawivar ,lucknow</a>
                   </h3>
 
                   <p className="card-text">
@@ -1447,7 +1447,7 @@ const Listing = () => {
 
                     <div>
                       <p className="author-name">
-                        <a href="#">Shaikh Ubaid Tibrani</a>
+                        <Link to="#">Shaikh Ubaid Tibrani</a>
                       </p>
 
                       <p className="author-title">Full Stack-Developer</p>

@@ -28,6 +28,7 @@ function Blog() {
     getDataFromBackend();
   }, [updateLikes]);
 
+
   const handleLikeClick = async () => {
     if (updateLikes === false) {
       const dataToDB = {
@@ -119,7 +120,7 @@ function Blog() {
         </div>
 
         <div className="row">
-          <img className="img-fluid" src={backendData.image} height="70vh" />
+          <img alt="image1" className="img-fluid" src={backendData.image} height="70vh" />
         </div>
 
         <div
