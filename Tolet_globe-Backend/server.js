@@ -12,6 +12,7 @@ const path = require("path");
 const multer = require("multer");
 const { storage } = require("./cloudinary");
 const session = require("express-session");
+const bcrypt = require("bcrypt");
 
 const app = express();
 
@@ -37,7 +38,7 @@ const upload = multer({ storage });
 app.use(
   cors({
     origin: true,
-    methods: "GET,POST,PUT,DELETE",
+    methods: "*",
     credentials: true,
   })
 );
@@ -89,7 +90,7 @@ app.post("/register", async (req, res) => {
       res.send("Error saving session");
     } else {
       console.log(req.session);
-      res.json({ isRegiter: true });
+      res.json({ isRegister: true });
     }
   });
 });
@@ -146,6 +147,7 @@ app.post("/createBlog/auth", async (req, res) => {
 
 // Route to create new blog
 app.post("/blogs/new", upload.single("image"), async (req, res) => {
+  // console.log(req.body);
   const dataWithCloudinaryImgUrl = { ...req.body, image: req.file.path };
   const newBlog = new Blog(dataWithCloudinaryImgUrl);
   await newBlog.save();
@@ -155,14 +157,15 @@ app.post("/blogs/new", upload.single("image"), async (req, res) => {
 // Route to update views a Specfic blog
 app.post("/blogs/updateViews/:id", async (req, res) => {
   const { id } = req.params;
-  const updatedBlog = await Blog.findByIdAndUpdate(id, req.body);
+  await Blog.findByIdAndUpdate(id, req.body);
   res.send("success");
 });
 
 // Route to Update the Likes of blog
 app.post("/blogs/updateLikes/:id", async (req, res) => {
   const { id } = req.params;
-  const updatedBlog = await Blog.findByIdAndUpdate(id, req.body);
+  console.log(req.body);
+  await Blog.findByIdAndUpdate(id, req.body);
   res.send("success");
 });
 
@@ -197,15 +200,6 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send("Something broke!");
 });
-
-// Cookie session setup
-app.use(
-  cookieSession({
-    name: "session",
-    keys: ["tolet"],
-    maxAge: 24 * 60 * 60 * 1000, // 24 hours
-  })
-);
 
 // Use routes
 app.use("/auth", authRoute);
