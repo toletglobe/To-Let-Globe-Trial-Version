@@ -28,6 +28,12 @@
   color: #5aa79f;
   margin-bottom: 16px;
   cursor: pointer;
+  /* align-items: left; */
+}
+
+#readmorediv {
+  display: flex;
+  align-items: left;
 }
 
 .card-text {
@@ -42,4 +48,9 @@
 
 a {
   color: #999daa;
+}
+
+#viewsdiv {
+  display: flex;
+  flex-direction: row;
 }

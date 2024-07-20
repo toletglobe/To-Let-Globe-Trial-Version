@@ -5,7 +5,6 @@ import DateCategory from "./DateCategory";
 import Views from "./Views";
 import Likes from "./Likes";
 import AuthorDetails from "./AuthorDetails";
-// import axios from "axios";
 import axios from "./axiosConfig";
 import { useNavigate } from "react-router-dom";
 
@@ -25,26 +24,12 @@ const BlogCard = ({
   updateLikes,
   setUpdateLikes,
 }) => {
-  // console.log(process.env.REACT_APP_BACKEND);
   const navigate = useNavigate();
-
-  // const [like, setLikes] = useState(0);
-  // const [liked, setLiked] = useState(false);
 
   const [isLiked, setLike] = useState(false);
 
-  // const handleLikes = () => {
-  //   if (liked) {
-  //     setLikes(like - 1);
-  //   } else {
-  //     setLikes(like + 1);
-  //   }
-  //   setLiked(!liked);
-  // };
-
   const handleLikes = async () => {
     if (isLiked === false) {
-      // if (updateLikes === false) {
       const dataToDB = {
         id: id,
         title: title,
@@ -61,14 +46,11 @@ const BlogCard = ({
       await axios
         .post(`/blogs/updateLikes/${id}`, dataToDB)
         .then((response) => {
-          // console.log("Success:", response.data);
-          // Redirect to the /blogs page
           setLike(!isLiked);
           setUpdateLikes(!updateLikes);
         })
         .catch((error) => {
           console.error("Error:", error);
-          // Handle error actions, e.g., show error message
         });
     } else {
       const dataToDB = {
@@ -87,14 +69,11 @@ const BlogCard = ({
       await axios
         .post(`/blogs/updateLikes/${id}`, dataToDB)
         .then((response) => {
-          // console.log("Success:", response.data);
-          // Redirect to the /blogs page
           setLike(!isLiked);
           setUpdateLikes(!updateLikes);
         })
         .catch((error) => {
           console.error("Error:", error);
-          // Handle error actions, e.g., show error message
         });
     }
   };
@@ -118,13 +97,11 @@ const BlogCard = ({
       process.env.REACT_APP_API_URL + `/blogs/updateViews/${id}`,
       dataToDB
     );
-    // console.log("Success:", response.data);
     navigate(`/showBlog/${id}`);
   };
 
   return (
     <div className="card" style={{ width: "30%", height: "70vh" }}>
-      {/* <div class="card" style={{ width: "30%" }}> */}
       <img
         src={image}
         className="card-img-top"
@@ -161,8 +138,7 @@ const BlogCard = ({
             </p>
           </div>
 
-          <div>
-            {/* <a class="readmore btn" onClick={handleViews} href={`/showBlog/${id}`}> */}
+          <div id="readmorediv">
             <a className="readmore" onClick={handleViews}>
               Read More <TrendingFlatIcon />
             </a>
@@ -174,7 +150,7 @@ const BlogCard = ({
                 <AuthorDetails author={author} role={role} />
               </div>
               <div className="col-4 p-0 d-flex justify-content-between">
-                <div className="col-6 p-0 d-inline">
+                <div id="viewsdiv" className="col-6 p-0 d-inline">
                   <Views views={views} />
                 </div>
                 <div className="col-5 p-0 d-inline">
@@ -188,23 +164,6 @@ const BlogCard = ({
               </div>
             </div>
           </div>
-          {/* 
-          <div
-            className="my-4 cursor-pointer"
-            onClick={() => {
-              if (isUserLiked) setTotalLikes((prev) => prev - 1);
-              if (!isUserLiked) setTotalLikes((prev) => prev + 1);
-              setIsUserLiked(!isUserLiked);
-              toggleLikeHandler();
-            }}
-          >
-            {isUserLiked ? (
-              <FaHeart className="text-red-500" />
-            ) : (
-              <FaRegHeart className="text-[#3cbcb1]" />
-            )}
-          </div>
-          <p className="text-sm text-gray-400"> {totalLikes} Likes</p> */}
         </div>
       </div>
     </div>

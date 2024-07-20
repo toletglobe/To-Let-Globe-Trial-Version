@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../../style/blog/BlogContanier.css";
 // import BlogCard from "./BlogCard";
 import BlogCard from "./BlogCard";
 import Pagination from "./Pagination";
 import Toggle from "./Toggle";
 // import axios from "axios";
+import MyContext from "../../context";
 
 import axios from "./axiosConfig";
 
@@ -16,7 +17,9 @@ function BlogContainer() {
 
   const [currentPg, setCurrentPg] = useState(1);
 
-  const [updateLikes, setUpdateLikes] = useState(false);
+  // const [updateLikes, setUpdateLikes] = useState(false);
+
+  const { updateLikes, setUpdateLikes } = useContext(MyContext);
 
   async function getDataFromBackend() {
     const allBlogs = await axios.get("/blogs");

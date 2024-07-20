@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import DateCategory from "./DateCategory";
 import Views from "./Views";
@@ -9,16 +9,16 @@ import "../../style/blog/Blog.css";
 // require("dotenv").config({ path: ".env" });
 import axios from "./axiosConfig";
 import NavBar from "../NavBar";
+import MyContext from "../../context";
 
 // Component to Display a Single Blog
 function Blog() {
   const { id } = useParams();
 
-  console.log(process.env.REACT_APP_API_URL);
-
   const [backendData, setBackendData] = useState([{}]);
+  const { updateLikes, setUpdateLikes } = useContext(MyContext);
 
-  const []=useState()
+  const [] = useState();
 
   useEffect(() => {
     async function getDataFromBackend() {
@@ -26,7 +26,55 @@ function Blog() {
       setBackendData(blog.data);
     }
     getDataFromBackend();
-  }, []);
+  }, [updateLikes]);
+
+  const handleLikeClick = async () => {
+    if (updateLikes === false) {
+      const dataToDB = {
+        id: backendData.id,
+        title: backendData.title,
+        author: backendData.author,
+        content: backendData.content,
+        image: backendData.image,
+        role: backendData.role,
+        category: backendData.category,
+        views: backendData.views,
+        likes: backendData.likes + 1,
+        date: backendData.date,
+        intro: backendData.intro,
+      };
+      await axios
+        .post(`/blogs/updateLikes/${id}`, dataToDB)
+        .then((response) => {
+          setUpdateLikes(!updateLikes);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    } else {
+      const dataToDB = {
+        id: backendData.id,
+        title: backendData.title,
+        author: backendData.author,
+        content: backendData.content,
+        image: backendData.image,
+        role: backendData.role,
+        category: backendData.category,
+        views: backendData.views,
+        likes: backendData.likes - 1,
+        date: backendData.date,
+        intro: backendData.intro,
+      };
+      await axios
+        .post(`/blogs/updateLikes/${id}`, dataToDB)
+        .then((response) => {
+          setUpdateLikes(!updateLikes);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    }
+  };
 
   return (
     <>
@@ -53,7 +101,12 @@ function Blog() {
               <Views views={backendData.views} />
             </div>
             <div className="col-4 p-0 d-inline">
-              <Likes likes={backendData.likes} />
+              {/* isLiked, likes, handleLikes */}
+              <Likes
+                isLiked={updateLikes}
+                likes={backendData.likes}
+                handleLikes={handleLikeClick}
+              />
             </div>
           </div>
           <div className="col-1">
