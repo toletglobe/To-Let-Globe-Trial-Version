@@ -133,12 +133,12 @@ app.post("/logInStatus", (req, res) => {
 // Route to Check If User is auth to create blog
 app.post("/createBlog/auth", async (req, res) => {
   if (
-    (req.session.user_id && req.session.user_role === "content-creator") ||
-    (req.session.user_id && req.session.user_role === "admin")
+    req.session.user_id &&
+    (req.session.user_role === "content-creator" || req.session.user_role === "admin")
   ) {
-    res.json({ isLoggedIn: true });
+    res.json({ isAuth: true });
   } else {
-    res.json({ isLoggedIn: false });
+    res.json({ isAuth: false });
   }
 });
 

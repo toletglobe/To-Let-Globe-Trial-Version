@@ -14,7 +14,7 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
       .post("/createBlog/auth")
       .then((response) => {
         console.log(response.data);
-        if (response.data.isRegister === true) {
+        if (response.data === true) {
           navigate("/createBlog");
         } else {
           alert("Please login as Content Creator to post a Blog!");
