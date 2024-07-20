@@ -210,6 +210,7 @@ const NavBar = () => {
               Service
             </Nav.Link>
             <Nav.Link
+
               as={NavLink}
               to="/blog"
               activeClassName="active"

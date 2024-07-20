@@ -7,9 +7,9 @@ require("dotenv").config();
 
 // Defining the Clodinary Config Parameters from .env file
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_KEY,
-  api_secret: process.env.CLOUDINARY_SECRET,
+  cloud_name: "dxhgvsse5",
+  api_key: "452328774739453",
+  api_secret: "9Qd421VE1eCSw1Ny45leF1Zc6PU",
 });
 
 // Setting up Cloudinary Storage
