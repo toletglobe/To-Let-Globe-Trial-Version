@@ -44,6 +44,7 @@ const Register = () => {
     evt.preventDefault();
 
     const response = await axios.post("/register", formData);
+    console.log(response.data);
     alert("Registration Successful!");
     navigate("/blog");
   };

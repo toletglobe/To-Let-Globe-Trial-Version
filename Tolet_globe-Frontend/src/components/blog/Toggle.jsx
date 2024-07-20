@@ -13,7 +13,8 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
     await axios
       .post("/createBlog/auth")
       .then((response) => {
-        if (response.data.isAuth === true) {
+        console.log(response.data);
+        if (response.data.isRegister === true) {
           navigate("/createBlog");
         } else {
           alert("Please login as Content Creator to post a Blog!");

@@ -136,9 +136,9 @@ app.post("/createBlog/auth", async (req, res) => {
     (req.session.user_id && req.session.user_role === "content-creator") ||
     (req.session.user_id && req.session.user_role === "admin")
   ) {
-    res.json({ isAuth: true });
+    res.json({ isLoggedIn: true });
   } else {
-    res.json({ isAuth: false });
+    res.json({ isLoggedIn: false });
   }
 });
 

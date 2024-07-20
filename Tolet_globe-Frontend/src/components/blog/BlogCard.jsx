@@ -146,9 +146,9 @@ const BlogCard = ({
             </a>
           </div>
 
-          <div className="container-fluid p-0">
+          <div className="container-fluid m-3">
             <div className="row d-flex">
-              <div className="col-6 pr-0">
+              <div className="col-7 pr-0">
                 <AuthorDetails author={author} role={role} />
               </div>
               <div className="col-4 p-0 d-flex">

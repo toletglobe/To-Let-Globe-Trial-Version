@@ -44,6 +44,7 @@ const Login = () => {
         if (response.data.isLogin === false) {
           alert("Invalid Credentials! Please Try Again");
         } else {
+          console.log(response.data.isLogin);
           alert("Login Successful!");
           navigate("/blog");
         }
