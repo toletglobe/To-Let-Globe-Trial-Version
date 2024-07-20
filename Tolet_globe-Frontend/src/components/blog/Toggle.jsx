@@ -25,7 +25,7 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
   return (
     <div className="container outer my-5">
       <div className="row d-flex justify-content-between">
-        <div className="col-3" id="togglecontainer">
+        <div className="col-3" id="togglecontainer1">
           <button
             type="button"
             className={`btn custom btn-lg ${isLatest ? "active" : ""}`}
@@ -41,7 +41,7 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
             Trending
           </button>
         </div>
-        <div className="col-3 togglecontainer">
+        <div className="col-3" id="togglecontainer2">
           <a
             type="button"
             className="btn custom btn-lg"

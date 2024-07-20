@@ -1,7 +1,17 @@
-#togglecontainer {
+#togglecontainer1 {
   width: 260px;
   height: 80px;
-  background-color: #171717 !important;
+  background-color: #171717;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#togglecontainer2 {
+  width: 190px;
+  height: 80px;
+  background-color: #171717;
   border-radius: 10%;
   display: flex;
   align-items: center;
@@ -9,24 +19,24 @@
 }
 
 #createBlog {
-  color: white !important;
-  padding: 10px 23px !important;
+  color: white;
+  padding: 10px 23px;
 }
 
-
-#createBlog {
-  color: white !important;
-  padding: 10px 23px !important;
+#createBlog:hover {
+  background-color: Black;
+  color: #5aa79f;
+  cursor: pointer;
 }
 
-#togglecontainer .btn.custom {
-  color: white !important;
-  padding: 10px 23px !important;
+#togglecontainer1 .btn.custom {
+  color: white;
+  padding: 10px 23px;
 }
-#togglecontainer .btn.custom:hover {
-  background-color: Black !important;
-  color: #5aa79f !important;
-  cursor: pointer !important;
+#togglecontainer1 .btn.custom:hover {
+  background-color: Black;
+  color: #5aa79f;
+  cursor: pointer;
 }
 
 /* .outer {
