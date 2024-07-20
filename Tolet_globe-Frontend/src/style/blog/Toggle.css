@@ -1,0 +1,25 @@
+#togglecontainer {
+  width: 260px;
+  height: 80px;
+  background-color: #171717 !important;
+  border-radius: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#togglecontainer .btn.custom {
+  color: white !important;
+  padding: 10px 23px !important;
+}
+#togglecontainer .btn.custom:hover {
+  background-color: Black !important;
+  color: #5aa79f !important;
+  cursor: pointer !important;
+}
+
+/* .outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
