@@ -6,9 +6,9 @@ import "../../style/blog/Category.css";
 const Category = ({ title, imgurl }) => {
   return (
     <div id="categoryCard" className="card" style={{ width: "25%" }}>
-      <img src={imgurl} className="card-img-top" alt="..." />
+      <img src={imgurl} id="categoryimg" className="card-img-top" alt="..." />
       <div className="card-body">
-        <p className="card-text">
+        <p className="card-text d-flex">
           {title}{" "}
           <a className="arrow" href="#">
             <TrendingFlatIcon style={{ color: "#5aa79f" }} />

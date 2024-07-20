@@ -9,7 +9,9 @@ function Views({ views }) {
         <VisibilityTwoToneIcon style={{ color: "#9da2af" }} />
       </span>
       <span> </span>
-      <span style={{ color: "#9da2af" }}>{views}</span>
+      <span className="pl-2" style={{ color: "#9da2af" }}>
+        {views}
+      </span>
     </>
   );
 }

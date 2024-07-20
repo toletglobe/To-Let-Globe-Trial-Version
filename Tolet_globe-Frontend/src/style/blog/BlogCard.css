@@ -31,10 +31,10 @@
   /* align-items: left; */
 }
 
-#readmorediv {
+/* #readmorediv {
   display: flex;
   align-items: left;
-}
+} */
 
 .card-text {
   color: #999daa;

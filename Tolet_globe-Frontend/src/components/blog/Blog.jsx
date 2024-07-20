@@ -81,7 +81,7 @@ function Blog() {
       <NavBar />
       <div className="container" id="blogContainer">
         <DateCategory date={backendData.date} category={backendData.category} />
-        <h1 className="my-3">{backendData.title}</h1>
+        <h1 className="my-3 blogtitle">{backendData.title}</h1>
         <div className="row">
           <div className="col-2">
             <AuthorDetails
@@ -96,12 +96,10 @@ function Blog() {
           id="borderrow"
         >
           <div className="col-2 p-0 d-flex flex-start">
-            {/* <div class="col-4 p-0 d-flex justify-content-between"> */}
-            <div className="col-4 p-0 d-inline">
+            <div className="col-4 p-0 d-flex">
               <Views views={backendData.views} />
             </div>
-            <div className="col-4 p-0 d-inline">
-              {/* isLiked, likes, handleLikes */}
+            <div className="col-4 p-0 d-flex">
               <Likes
                 isLiked={updateLikes}
                 likes={backendData.likes}
@@ -109,8 +107,8 @@ function Blog() {
               />
             </div>
           </div>
-          <div className="col-1">
-            <span className="text-decoration-underline" id="read">
+          <div className="col-2">
+            <span className="text-decoration-underline text-right" id="read">
               6 min read
             </span>
           </div>

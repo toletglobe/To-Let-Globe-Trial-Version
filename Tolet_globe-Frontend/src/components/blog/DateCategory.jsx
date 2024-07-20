@@ -25,4 +25,6 @@ function DateCategory({ date, category }) {
   );
 }
 
+
+
 export default DateCategory;

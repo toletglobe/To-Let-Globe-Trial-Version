@@ -110,6 +110,7 @@ const BlogCard = ({
         // style={{ objectFit: "cover" }}
       />
 
+
       <div className="row">
         <div className="card-body" id="#nopadding">
           <p className="card-text">
@@ -150,10 +151,10 @@ const BlogCard = ({
                 <AuthorDetails author={author} role={role} />
               </div>
               <div className="col-4 p-0 d-flex justify-content-between">
-                <div id="viewsdiv" className="col-6 p-0 d-inline">
+                <div id="viewsdiv" className="col-6 p-0 d-flex">
                   <Views views={views} />
                 </div>
-                <div className="col-5 p-0 d-inline">
+                <div className="col-5 p-0 d-flex">
                   <Likes
                     isLiked={isLiked}
                     // updateLikes={updateLikes}
