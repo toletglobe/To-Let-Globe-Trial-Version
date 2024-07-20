@@ -53,7 +53,7 @@ function App() {
           <Route path="/" element={<Layout />} />
           <Route path="/contact" element={<Contact />} />
           {/* <Route path="/blog" element={<Blog />} /> */}
-          <Route path="/blogs" element={<BlogMain />} />
+          <Route path="/blog" element={<BlogMain />} />
           {/* <Route path="/blog/blogpage-1" element={<BlogPage1 />} />
           <Route path="/blog/blogpage-2" element={<BlogPage2 />} />
           <Route path="/blog/blogpage-3" element={<BlogPage3 />} />
