@@ -10,7 +10,7 @@ export const HomeUp = () =>{
           <Col xs={12} md={8} lg={6}>
             <h1 className="tagline text-center">Welcome to To-Let Globe</h1>
             <h6 className="headline text-center">
-              NO BROKERAGE ON PGS | FLATS | HOUSES | OFFICES
+              NO BROKERAGE ON PGS | FLATS | HOUSES | OFFICES 
             </h6>
               <TopImages />
           </Col>
