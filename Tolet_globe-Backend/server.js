@@ -11,6 +11,7 @@ const multer = require("multer");
 const { storage } = require("./cloudinary");
 const session = require("express-session");
 const bcrypt = require("bcrypt");
+
 const app = express();
 
 // Connect to MongoDB
@@ -35,7 +36,7 @@ const upload = multer({ storage });
 app.use(
   cors({
     origin: true,
-    methods: "GET,POST,PUT,DELETE",
+    methods: "*",
     credentials: true,
   })
 );
@@ -143,6 +144,7 @@ app.post("/createBlog/auth", async (req, res) => {
 
 // Route to create new blog
 app.post("/blogs/new", upload.single("image"), async (req, res) => {
+  // console.log(req.body);
   const dataWithCloudinaryImgUrl = { ...req.body, image: req.file.path };
   const newBlog = new Blog(dataWithCloudinaryImgUrl);
   await newBlog.save();

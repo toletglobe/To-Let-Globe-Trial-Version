@@ -6,8 +6,10 @@ import TrackVisibility from "react-on-screen";
 import messageIMG from "../../assets/img/message-img.png";
 import callIMG from "../../assets/img/call-img.png";
 import { Footer } from "../footer";
+import NavBar from "../NavBar";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+
 export const Contact = () => {
   const formInitialDetails = {
     name: "",
@@ -58,7 +60,9 @@ export const Contact = () => {
   };
 
   return (
-    <section className="contact" id="contact">
+    <>
+      <NavBar/>
+     <section className="contact" id="contact">
       <Toaster />
       <Container>
         <Row className="align-items-center justify-content-between">
@@ -202,5 +206,10 @@ export const Contact = () => {
         <Footer />
       </Container>
     </section>
+    
+    
+    </>
+   
+
   );
 };
