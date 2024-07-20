@@ -78,7 +78,7 @@ export const NavBar = () => {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/blog"
+              to="/blogs"
               className={`nav-link ${activeLink === "blog" ? "active" : ""}`}
               onClick={() => handleNavLinkClick("blog")}
             >
