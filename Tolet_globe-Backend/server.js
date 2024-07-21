@@ -149,6 +149,7 @@ app.post("/createBlog/auth", async (req, res) => {
   }
 });
 
+
 // Route to create new blog
 app.post("/blogs/new", upload.single("image"), async (req, res) => {
   // console.log(req.body);
