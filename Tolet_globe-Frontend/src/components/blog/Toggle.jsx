@@ -26,37 +26,36 @@ function Toggle({ isLatest, handleClickLatest, handleClickTrending }) {
   };
   return (
     <div>
-    <div className="main-toggle outer my-5">
-      <div className="row d-flex justify-content-between">
-        <div className="col-3" id="togglecontainer1">
-          <button
-            type="button"
-            className={`btn custom btn-lg ${isLatest ? "active" : ""}`}
-            onClick={handleClickLatest}
-          >
-            Latest
-          </button>
-          <button
-            type="button"
-            className={`btn custom btn-lg ${!isLatest ? "active" : ""}`}
-            onClick={handleClickTrending}
-          >
-            Trending
-          </button>
+      <div className="main-toggle outer my-5">
+        <div className="row d-flex justify-content-center">
+          <div className="col-3" id="togglecontainer1">
+            <button
+              type="button"
+              className={`btn custom btn-lg ${isLatest ? "active" : ""}`}
+              onClick={handleClickLatest}
+            >
+              Latest
+            </button>
+            <button
+              type="button"
+              className={`btn custom btn-lg ${!isLatest ? "active" : ""}`}
+              onClick={handleClickTrending}
+            >
+              Trending
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-    <div className="col" id="togglecontainer2">
-          <a
-            type="button"
-            className="btn custom btn-lg"
-            id="createBlog"
-            // href="/createBlog"
-            onClick={handleCreateBlog}
-          >
-            Create Blog
-          </a>
-        </div>
+      <div className="col" id="togglecontainer2">
+        <a
+          type="button"
+          className="btn custom btn-lg"
+          id="createBlog"
+          onClick={handleCreateBlog}
+        >
+          Create Blog
+        </a>
+      </div>
     </div>
   );
 }

@@ -17,17 +17,20 @@
 }
 
 #togglecontainer2 {
-  width: 160px;
+  width: 300px;
   height: 80px;
   border-radius: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #createBlog {
   color: white;
   padding: 10px 23px;
+  margin-left: 140px;
+  border: 1px solid white;
+}
+
+#createBlog:hover {
+  border: 1px solid #5aa79f;
 }
 
 #createBlog:hover {
@@ -44,4 +47,8 @@
   background-color: Black;
   color: #5aa79f;
   cursor: pointer;
+}
+
+#togglecontainer2 {
+  margin-left: 10px;
 }

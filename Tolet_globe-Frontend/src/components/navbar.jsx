@@ -12,6 +12,7 @@ const NavBar = () => {
     await axios
       .post("/logInStatus")
       .then((response) => {
+        console.log(response.log);
         if (response.data.isLoggedIn) {
           setIsLoggedIn(true);
         } else {
@@ -20,7 +21,6 @@ const NavBar = () => {
       })
       .catch((error) => {
         console.error("Error:", error);
-        // Handle error actions, e.g., show error message
       });
   };
 
