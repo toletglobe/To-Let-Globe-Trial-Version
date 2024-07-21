@@ -13,86 +13,86 @@ export const Service = () => {
     <>
       <div className="serviceouterdiv">
         <div className="serviced2">
-          <p class="serviceh1">Services</p>
-          <p class="serviceh2">
+          <p className="serviceh1">Services</p>
+          <p className="serviceh2">
             SKIP THE MIDDLEMAN : RENT OR LEASE DIRECTLY ON TO-LET GLOBE
           </p>
         </div>
 
-        <div class="row-container">
-          <div class="serviced1">
-            <div class="box1">
-              <div class="box12">
-                <img class="servicepageimage" src={Image1} alt=""></img>
+        <div className="row-container">
+          <div className="serviced1">
+            <div className="box1">
+              <div className="box12">
+                <img className="servicepageimage" src={Image1} alt=""></img>
               </div>
-              <div class="box13">
-                <p class="servicepagetext">Paying Guest</p>
-                <div class="box14">
+              <div className="box13">
+                <p className="servicepagetext">Paying Guest</p>
+                <div className="box14">
                   Find budget-frinedly and Convient paying guest accomadations
                   for a Comfortable stay away from home
                 </div>
               </div>
             </div>
 
-            <div class="box1">
-              <div class="box12">
-                <img class="servicepageimage" src={Image2} alt="" />
+            <div className="box1">
+              <div className="box12">
+                <img className="servicepageimage" src={Image2} alt="" />
               </div>
-              <div class="box23">
-                <p class="servicepagetext">Flat</p>
-                <div class="box14">
+              <div className="box23">
+                <p className="servicepagetext">Flat</p>
+                <div className="box14">
                   Discover a diverse range of apartments for rent, customize to
                   suit your lifestyle and budget
                 </div>
               </div>
             </div>
 
-            <div class="box1">
-              <div class="box12">
-                <img class="servicepageimage" src={Image3} alt=""></img>
+            <div className="box1">
+              <div className="box12">
+                <img className="servicepageimage" src={Image3} alt=""></img>
               </div>
-              <div class="box13">
-                <p class="servicepagetext">House</p>
-                <div class="box14">
+              <div className="box13">
+                <p className="servicepagetext">House</p>
+                <div className="box14">
                   Search for your dream home, available for rent or sale,
                   tailored to your lifestyle and preferences
                 </div>
               </div>
             </div>
           </div>
-          <div class="serviced1">
-            <div class="box1">
-              <div class="box12">
-                <img class="servicepageimage" src={Image4} alt=""></img>
+          <div className="serviced1">
+            <div className="box1">
+              <div className="box12">
+                <img className="servicepageimage" src={Image4} alt=""></img>
               </div>
-              <div class="box23">
-                <p class="servicepagetext">Shop</p>
-                <div class="box14">
+              <div className="box23">
+                <p className="servicepagetext">Shop</p>
+                <div className="box14">
                   Explore a variety of retail spaces and shops available for
                   lease, ideal for growing your business
                 </div>
               </div>
             </div>
 
-            <div class="box1">
-              <div class="box12">
-                <img class="servicepageimage" src={Image5} alt=""></img>
+            <div className="box1">
+              <div className="box12">
+                <img className="servicepageimage" src={Image5} alt=""></img>
               </div>
-              <div class="box13">
-                <p class="servicepagetext">Office</p>
-                <div class="box14">
+              <div className="box13">
+                <p className="servicepagetext">Office</p>
+                <div className="box14">
                   Elevate your workspace and productivity with modern office
                   spaces for ent, designed for success
                 </div>
               </div>
             </div>
-            <div class="box1">
-              <div class="box12">
-                <img class="servicepageimage" src={Image6} alt=""></img>
+            <div className="box1">
+              <div className="box12">
+                <img className="servicepageimage" src={Image6} alt=""></img>
               </div>
-              <div class="box23">
-                <p class="servicepagetext">Warehouse</p>
-                <div class="box14">
+              <div className="box23">
+                <p className="servicepagetext">Warehouse</p>
+                <div className="box14">
                   Secure the perfect godwon space for rent, offering ample
                   storage and logistics solutions
                 </div>

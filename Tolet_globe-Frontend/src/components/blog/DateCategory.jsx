@@ -16,16 +16,14 @@ function DateCategory({ date, category }) {
 
   return (
     <>
-      <div class="d-flex">
+      <span className="d-flex">
         <span id="date">{formattedDate} </span>
         <span id="category">
           <a href="#">{category}</a>
         </span>
-      </div>
+      </span>
     </>
   );
 }
-
-
 
 export default DateCategory;

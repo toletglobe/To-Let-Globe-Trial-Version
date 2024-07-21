@@ -71,9 +71,9 @@ function BlogContainer() {
       />
 
       <div className="container BlogContainer">
-        {sixBlogData.map((datapt) => (
+        {sixBlogData.map((datapt, i) => (
           <BlogCard
-            key={datapt._id}
+            key={i}
             id={datapt._id}
             title={datapt.title}
             author={datapt.author}
