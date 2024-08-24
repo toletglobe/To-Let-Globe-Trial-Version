@@ -88,7 +88,7 @@ function App() {
           <Route path="/flow2a7" element={<Flow2g />} />
           <Route path="/flow2a8" element={<Flow2h />} />
           {/* Route to display specific blog */}
-          <Route path="/showBlog/:id" element={<Blog />} />
+          <Route path="/showBlog/:slug" element={<Blog />} />
           {/* Route to display create blog page */}
           <Route path="/createBlog" element={<CreateBlog />} />
         </Routes>

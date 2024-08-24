@@ -11,6 +11,7 @@ const multer = require("multer");
 const { storage } = require("./cloudinary");
 const session = require("express-session");
 const bcrypt = require("bcrypt");
+const slugify = require("slugify");
 
 const app = express();
 
@@ -137,24 +138,29 @@ app.post("/createBlog/auth", async (req, res) => {
 
     if (
       req.session.user_id &&
-      (req.session.user_role === "content-creator" || req.session.user_role === "admin")
+      (req.session.user_role === "content creator" ||
+        req.session.user_role === "admin")
     ) {
       res.json({ isAuth: true });
     } else {
       res.json({ isAuth: false });
     }
   } catch (err) {
-    console.error("Error checking authorization:", err); 
+    console.error("Error checking authorization:", err);
     res.status(500).json({ isAuth: false, error: "Internal Server Error" });
   }
 });
 
-
 // Route to create new blog
 app.post("/blogs/new", upload.single("image"), async (req, res) => {
   // console.log(req.body);
-  const dataWithCloudinaryImgUrl = { ...req.body, image: req.file.path };
-  const newBlog = new Blog(dataWithCloudinaryImgUrl);
+  const slug = slugify(req.body.title, { lower: true, strict: true });
+  const dataWithCloudinaryImgUrlandSlug = {
+    ...req.body,
+    image: req.file.path,
+    slug: slug,
+  };
+  const newBlog = new Blog(dataWithCloudinaryImgUrlandSlug);
   await newBlog.save();
   res.send("success");
 });
@@ -174,9 +180,11 @@ app.post("/blogs/updateLikes/:id", async (req, res) => {
 });
 
 // Route to get details of Specific Blog
-app.get("/blogs/:id", async (req, res) => {
-  const { id } = req.params;
-  const blog = await Blog.findById(id);
+app.get("/blogs/:slug", async (req, res) => {
+  // const { id } = req.params;
+  const { slug } = req.params;
+
+  const blog = await Blog.findOne({ slug: slug });
   res.json(blog);
 });
 

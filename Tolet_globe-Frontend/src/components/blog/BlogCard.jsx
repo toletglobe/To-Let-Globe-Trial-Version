@@ -25,6 +25,7 @@ const BlogCard = ({
   intro,
   updateLikes,
   setUpdateLikes,
+  slug,
 }) => {
   const navigate = useNavigate();
 
@@ -44,6 +45,7 @@ const BlogCard = ({
         likes: likes + 1,
         date: date,
         intro: intro,
+        slug: slug,
       };
       await axios
         .post(`/blogs/updateLikes/${id}`, dataToDB)
@@ -67,6 +69,7 @@ const BlogCard = ({
         likes: likes - 1,
         date: date,
         intro: intro,
+        slug: slug,
       };
       await axios
         .post(`/blogs/updateLikes/${id}`, dataToDB)
@@ -93,13 +96,14 @@ const BlogCard = ({
       likes: likes,
       date: date,
       intro: intro,
+      slug: slug,
     };
 
     const resp = await axios.post(
-      process.env.REACT_APP_API_URL + `blogs/updateViews/${id}`,
+      process.env.REACT_APP_API_URL + `/blogs/updateViews/${id}`,
       dataToDB
     );
-    navigate(`/showBlog/${id}`);
+    navigate(`/showBlog/${slug}`);
   };
 
   return (

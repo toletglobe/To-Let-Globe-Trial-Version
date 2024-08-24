@@ -87,17 +87,16 @@ function BlogContainer() {
             intro={datapt.intro}
             updateLikes={updateLikes}
             setUpdateLikes={setUpdateLikes}
+            slug={datapt.slug}
           />
         ))}
       </div>
-      <div 
-      style={{marginTop:"20px"}}>
-
-      <Pagination
-        noOfBlogs={backendData.length}
-        paginate={paginate}
-        currentPg={currentPg}
-      />
+      <div style={{ marginTop: "20px" }}>
+        <Pagination
+          noOfBlogs={backendData.length}
+          paginate={paginate}
+          currentPg={currentPg}
+        />
       </div>
     </>
   );

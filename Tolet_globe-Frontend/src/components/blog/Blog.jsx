@@ -13,7 +13,8 @@ import MyContext from "../../context";
 
 // Component to Display a Single Blog
 function Blog() {
-  const { id } = useParams();
+  // const { id } = useParams();
+  const { slug } = useParams();
 
   const [backendData, setBackendData] = useState([{}]);
   const { updateLikes, setUpdateLikes } = useContext(MyContext);
@@ -22,12 +23,13 @@ function Blog() {
 
   useEffect(() => {
     async function getDataFromBackend() {
-      const blog = await axios.get(`/blogs/${id}`);
+      // const blog = await axios.get(`/blogs/${id}`);
+      const blog = await axios.get(`/blogs/${slug}`);
+
       setBackendData(blog.data);
     }
     getDataFromBackend();
   }, [updateLikes]);
-
 
   const handleLikeClick = async () => {
     if (updateLikes === false) {
@@ -43,7 +45,9 @@ function Blog() {
         likes: backendData.likes + 1,
         date: backendData.date,
         intro: backendData.intro,
+        slug: backendData.slug,
       };
+      const id = backendData.id;
       await axios
         .post(`/blogs/updateLikes/${id}`, dataToDB)
         .then((response) => {
@@ -65,7 +69,10 @@ function Blog() {
         likes: backendData.likes - 1,
         date: backendData.date,
         intro: backendData.intro,
+        slug: backendData.slug,
       };
+      const id = backendData.id;
+
       await axios
         .post(`/blogs/updateLikes/${id}`, dataToDB)
         .then((response) => {
@@ -120,7 +127,12 @@ function Blog() {
         </div>
 
         <div className="row">
-          <img alt="image1" className="img-fluid" src={backendData.image} height="70vh" />
+          <img
+            alt="image1"
+            className="img-fluid"
+            src={backendData.image}
+            height="70vh"
+          />
         </div>
 
         <div
